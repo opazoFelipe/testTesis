@@ -1,0 +1,22 @@
+version: "3.1"
+
+services: 
+    # webapp:
+    #     build: 
+    #         context: .
+    #         dockerfile: ./webApp.Dockerfile
+    #     ports:
+    #         - "4000:3000"
+    #     container_name: plataformaCertificados
+    #     command: npm run dev
+
+    sqlserver: 
+        image: mcr.microsoft.com/mssql/server 
+        ports: 
+            - "1433:1433"
+        container_name: sqlserverdocker
+        environment: 
+            ACCEPT_EULA: Y
+            SA_PASSWORD: ?Password01.
+            MSSQL_PID: Developer
+
